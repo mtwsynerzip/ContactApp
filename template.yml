@@ -27,7 +27,7 @@ Resources:
   GetConstituents:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-Getconstituents'
+      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-GetConstituents'
       Handler: constituent.get
       Runtime: nodejs12.x
       Role:
@@ -43,7 +43,7 @@ Resources:
   CreateConstituents:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-Getconstituents'
+      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-CreateConstituents'
       Handler: constituent/add.main
       Runtime: nodejs12.x
       Role:
