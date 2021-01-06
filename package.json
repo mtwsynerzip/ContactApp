@@ -1,4 +1,5 @@
 {
+    "type": "module",
     "name": "hello-world",
     "description": "Sample NodeJs web application",
     "version": "0.0.1",
