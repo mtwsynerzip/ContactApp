@@ -44,7 +44,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-Getconstituents'
-      Handler: constituents.get
+      Handler: constituent.get
       Runtime: nodejs12.x
       Role:
         Fn::GetAtt:
