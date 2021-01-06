@@ -8,7 +8,7 @@ export async function main(event, context) {
     const data = JSON.parse(event.body);
 
     const parms = {
-        TableName: "TransactionalData"
+        TableName: "TransactionalData",
         Item: {
             PK: "CONSTITUENT#${userid}",
             SK: "CONSTITUENT#${userid}",
