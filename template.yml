@@ -44,7 +44,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-CreateConstituents'
-      Handler: constituent/add.main
+      Handler: add.main
       Runtime: nodejs12.x
       Role:
         Fn::GetAtt:
