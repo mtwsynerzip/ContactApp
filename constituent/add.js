@@ -1,20 +1,20 @@
 //import * as uuid from "uuid";
-var AWS = require("aws-sdk");
+import { DynamoDB } from "aws-sdk";
 
-const dynamoDb = new AWS.DynamoDB.DocumentClient();
+const dynamoDb = new DynamoDB.DocumentClient();
 
-exports.main = async function (event, context) {
+export async function main (event, context) {
     // Request body is passed in as a JSON encoded string in 'event.body'
     const data = JSON.parse(event.body);
 
     const params = {
         TableName: "TransactionalData",
         Item: {
-            PK: "CONSTITUENT#${userid}",
-            SK: "CONSTITUENT#${userid}",
-            ID: "${userid}",
-            FirstName: "${user_first_name}",
-            LastName: "${user_last_name}",
+            PK: "CONSTITUENT#"+ data.userid,
+            SK: "CONSTITUENT#"+ data.userid,
+            ID: data.userid,
+            firstName: data.user_first_name,
+            lastName: data.user_last_name,
             createdAt: Date.now(),
         },
     };

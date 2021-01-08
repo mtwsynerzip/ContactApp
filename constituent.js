@@ -1,9 +1,9 @@
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-exports.get = (event, context, callback) => {
+export function get(event, context, callback) {
   var contents = '<HTML><TITLE>YO</TITLE><BODY>Hey</BODY</HTML>';
 
 

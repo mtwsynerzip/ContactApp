@@ -1,15 +1,15 @@
 'use strict';
 
-var test = require('unit.js');
-var index = require('../index.js');
+import { number, string, value } from 'unit.js';
+import { get } from '../index.js';
 
 describe('Tests index', function() {
   it('verifies successful response', function(done) {
-    index.get({ /* event */ }, { /* context */ }, (err, result) => {
+    get({ /* event */ }, { /* context */ }, (err, result) => {
       try {
-        test.number(result.statusCode).is(200);
-        test.string(result.body).contains('Congratulations');
-        test.value(result).hasHeader('content-type', 'text/html');
+        number(result.statusCode).is(200);
+        string(result.body).contains('Congratulations');
+        value(result).hasHeader('content-type', 'text/html');
         done();
       } catch(error) {
         done(error);
