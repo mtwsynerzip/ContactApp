@@ -9,6 +9,7 @@ phases:
       - npm install
       - npm install --save-dev mocha
       - npm install --save @babel/polyfill
+      - npm install --save-dev unit.js
 
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
