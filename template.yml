@@ -55,7 +55,7 @@ Resources:
           Type: Api
           Properties:
             Path: /constituents
-            Method: put 
+            Method: post 
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
