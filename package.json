@@ -20,7 +20,6 @@
         "unit.js": "2.0.0"
     },
     "scripts": {
-        //"test": "mocha --require @babel/polyfill --require @babel/register --recursive tests"
         "test": "mocha -r babel-register -r babel-polyfill --recursive tests/"
     },
     "dependencies": {
