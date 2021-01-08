@@ -1,5 +1,6 @@
 'use strict';
 
+import "@babel/polyfill";
 import { readFileSync } from 'fs';
 import { sep } from 'path';
 

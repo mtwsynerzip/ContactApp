@@ -7,9 +7,12 @@ phases:
     commands:
       # Install dependencies needed for running tests
       - npm install
+      - npm install --save-dev mocha
+      - npm install --save @babel/polyfill
 
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
+      
   pre_build:
     commands:
       # Discover and run unit tests in the 'tests' directory
